@@ -18,28 +18,28 @@
       system = "x86_64-linux"; #if not working: see nix starter config
     in {
       nixosConfigurations = {
-        nixpc = nixpkgs.lib.nixosSystem {
+        laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs outputs;}; #necessary?
-          modules = [ ./hosts/nixpc/configuration.nix ];
+          modules = [ ./hosts/laptop/configuration.nix ];
         };
 
-        nixserver = nixpkgs.lib.nixosSystem {
+        server = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs outputs;}; #necessary?
-          modules = [ ./hosts/nixserver/configuration.nix ];
+          modules = [ ./hosts/server/configuration.nix ];
         };
       };
 
       homeConfigurations = {
-        "mael@nixpc" = home-manager.lib.homeManagerConfiguration {
+        "mael@laptop" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${system};
           extraSpecialArgs = {inherit inputs outputs;}; #necessary?
-          modules = [ ./hosts/nixpc/home.nix ];
+          modules = [ ./hosts/laptop/home.nix ];
         };
 
-        "mael@nixserver" = home-manager.lib.homeManagerConfiguration {
+        "mael@server" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${system};
           extraSpecialArgs = {inherit inputs outputs;}; #necessary?
-          modules = [ ./hosts/nixserver/home.nix ];
+          modules = [ ./hosts/server/home.nix ];
         };
       };
     };

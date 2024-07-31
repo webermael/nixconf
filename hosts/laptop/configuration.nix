@@ -30,7 +30,7 @@
   ];
 
   networking = {
-    hostName = "nixpc";
+    hostName = "laptop";
     networkmanager.enable = true;
   };
 
