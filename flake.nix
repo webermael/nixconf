@@ -1,5 +1,5 @@
 {
-  description = "Modular System Configuration"
+  description = "Modular System Configuration";
 
   inputs = {
     # Nixpkgs

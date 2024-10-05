@@ -28,7 +28,7 @@
 
   hardware.opengl = {
     enable = true;
-  }
+  };
 
   # modularize!!!
   programs.hyprland.enable = true;
