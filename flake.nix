@@ -19,12 +19,18 @@
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
-          modules = [ ./hosts/laptop/configuration.nix ];
+          modules = [ 
+            ./hosts/laptop/configuration.nix
+            ./nixosModules
+           ];
         };
 
         server = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
-          modules = [ ./hosts/server/configuration.nix ];
+          modules = [ 
+            ./hosts/server/configuration.nix
+            ./nixosModules
+           ];
         };
       };
 

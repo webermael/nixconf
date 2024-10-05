@@ -4,30 +4,10 @@
     ./hardware-configuration.nix
   ];
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
-
-  nix.settings = {
-    experimental-features = "nix-command flakes";
-    auto-optimise-store = true;
-  };
-
-  time.timeZone = "Europe/Zurich";
-  console.keyMap = "us-acentos";
-
-  # change / modularize?
-  environment.systemPackages = with pkgs; [
-    pavucontol
-    neovim
-    tldr
-    wget
-    git
-    gh
-  ];
-
+  general.enable = true;
+  sound.enable = true;
+  bluetooth.enable = true;
+  
   networking = {
     hostName = "laptop";
     networkmanager.enable = true;
@@ -43,14 +23,6 @@
       # add SSH keys
       #openssh.authorizedKeys.keys = [];
       extraGroups = ["wheel" "networkmanager"];
-    };
-  };
-
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false; #use keys only => change?
     };
   };
 
