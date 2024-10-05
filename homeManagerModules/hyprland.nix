@@ -12,7 +12,7 @@
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
-        "mod" = "SUPER";        
+        "$mod" = "SUPER";        
         bind = [
           "$mod, return, exec, kitty"
           "$mod, B, exec, firefox"
