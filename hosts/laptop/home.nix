@@ -1,33 +1,34 @@
-{ inputs, outputs, lib, config, pkgs, ...}:
+{ inputs, lib, config, pkgs, ... }:
 {
-  imports = [
-  ];
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
-
+  hyprland.enable = true;
+  zsh.enable = true;
+  
   home = {
     username = "mael";
     homeDirectory = "/home/mael";
   };
 
-  # fonts.fontconfig.enable = true;
-  # home.packages = with pkgs; [
-  # 
-  # ];
-
-  programs.home-manager.enable = true;
   programs.git = {
     enable = true;
     userName = "webermael";
     userEmail = "webermael7@gmail.com";
   };
 
+  # gtk = {
+  #   enable = true;
+  #   theme.name = "adw-gtk3";
+  #   cursorTheme.name = "Bibata-Modern-Ice";
+  #   iconTheme.name = "GruvboxPlux";
+  # };
+
+  # fonts.fontconfig.enable = true;
+  # home.packages = with pkgs; [
+  # 
+  # ];
+
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
-  system.stateVersion = "23.11";
+  programs.home-manager.enable = true;
 }

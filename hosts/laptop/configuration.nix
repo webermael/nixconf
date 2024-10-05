@@ -29,6 +29,10 @@
   hardware.opengl = {
     enable = true;
   }
+
+  # modularize!!!
+  programs.hyprland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   
   #system.stateVersion = "23.11"; -> check why this is necesary
 }

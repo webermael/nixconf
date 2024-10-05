@@ -10,6 +10,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyrpland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
@@ -23,7 +25,7 @@
           modules = [ 
             ./hosts/laptop/configuration.nix
             ./nixosModules
-           ];
+          ];
         };
 
         server = nixpkgs.lib.nixosSystem {
@@ -31,7 +33,7 @@
           modules = [ 
             ./hosts/server/configuration.nix
             ./nixosModules
-           ];
+          ];
         };
       };
 
@@ -39,13 +41,19 @@
         "mael@laptop" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = {inherit inputs;};
-          modules = [ ./hosts/laptop/home.nix ];
+          modules = [ 
+            ./hosts/laptop/home.nix
+            ./homeManagerModules
+          ];
         };
 
         "mael@server" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = {inherit inputs;};
-          modules = [ ./hosts/server/home.nix ];
+          modules = [ 
+            ./hosts/server/home.nix
+            ./homeManagerModules
+          ];
         };
       };
     };
