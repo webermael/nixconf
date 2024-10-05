@@ -15,6 +15,7 @@
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       system = "x86_64-linux"; #if not working: see nix starter config
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
@@ -36,13 +37,13 @@
 
       homeConfigurations = {
         "mael@laptop" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
+          inherit pkgs;
           extraSpecialArgs = {inherit inputs;};
           modules = [ ./hosts/laptop/home.nix ];
         };
 
         "mael@server" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
+          inherit pkgs;
           extraSpecialArgs = {inherit inputs;};
           modules = [ ./hosts/server/home.nix ];
         };
