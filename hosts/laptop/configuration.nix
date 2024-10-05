@@ -1,4 +1,4 @@
-{ inputs, outputs, lib, config, pkgs, ...}:
+{ inputs, lib, config, pkgs, ...}:
 {
   imports = [
     ./hardware-configuration.nix
@@ -14,7 +14,6 @@
     experimental-features = "nix-command flakes";
     auto-optimise-store = true;
   };
-
 
   time.timeZone = "Europe/Zurich";
   console.keyMap = "us-acentos";
@@ -43,7 +42,6 @@
       isNormalUser = true;
       # add SSH keys
       #openssh.authorizedKeys.keys = [];
-
       extraGroups = ["wheel" "networkmanager"];
     };
   };
@@ -60,20 +58,5 @@
     enable = true;
   }
   
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  }
-
-  sound.enable = true;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
-  system.stateVersion = "23.11";
+  #system.stateVersion = "23.11"; -> check why this is necesary
 }
