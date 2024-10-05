@@ -16,7 +16,7 @@
         bind = [
           "$mod, return, exec, kitty"
           "$mod, B, exec, firefox"
-          "$mod, SHIFT, Q, killactive,"
+          "$mod SHIFT, Q, killactive,"
           "$mod SHIFT, M, exit,"
           "$mod, F, fullscreen,"
 
