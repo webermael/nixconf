@@ -34,7 +34,7 @@
           "$mod SHIFT, l, movewindow, r"
           "$mod SHIFT, k, movewindow, u"
           "$mod SHIFT, j, movewindow, d"
-        ]       
+        ];
       };
     };
 

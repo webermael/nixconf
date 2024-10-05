@@ -21,10 +21,10 @@
     console.keyMap = "us-acentos";
 
     environment.systemPackages = with pkgs; [
-      pavucontol
       neovim
       tldr
       wget
+      curl
       git
       gh
     ];
