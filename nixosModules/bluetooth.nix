@@ -1,4 +1,4 @@
-{ pkgs, lib, config ...}: {
+{ pkgs, lib, config, ...}: {
 
   options = {
     bluetooth.enable =
@@ -9,6 +9,6 @@
     hardware.bluetooth = {
       enable = true;
       powerOnBoot = true;
-    }
+    };
   };
 }

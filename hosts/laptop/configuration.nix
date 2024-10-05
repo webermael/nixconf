@@ -5,7 +5,7 @@
   ];
 
   general.enable = true;
-  sound.enable = true;
+  systemSound.enable = true;
   bluetooth.enable = true;
   
   networking = {

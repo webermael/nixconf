@@ -1,11 +1,11 @@
-{ pkgs, lib, config ...}: {
+{ pkgs, lib, config, ...}: {
 
   options = {
-    sound.enable =
-      lib.mkEnableOption "enables sound";
+    systemSound.enable =
+      lib.mkEnableOption "enables systemSound";
   };
 
-  config = lib.mkIf config.sound.enable {
+  config = lib.mkIf config.systemSound.enable {
     sound.enable = true;
     security.rtkit.enable = true;
     services.pipewire = {

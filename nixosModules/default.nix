@@ -1,7 +1,7 @@
 { ... }: {
   imports = [
     ./general.nix
-    ./sound.nix
+    ./systemSound.nix
     ./bluetooth.nix
     ./openssh.nix
   ];
