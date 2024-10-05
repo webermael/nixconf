@@ -8,7 +8,7 @@
   config = lib.mkIf config.zsh.enable {
       programs.zsh = {
       enable = true;
-      enableAutosuggestions = true;
+      autosuggestion.enable = true;
       enableCompletion = true;
     };
   };
