@@ -4,5 +4,6 @@
     ./systemSound.nix
     ./bluetooth.nix
     ./openssh.nix
+    ./nh.nix
   ];
 }

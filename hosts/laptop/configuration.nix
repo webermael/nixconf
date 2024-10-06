@@ -7,6 +7,7 @@
   general.enable = true;
   systemSound.enable = true;
   bluetooth.enable = true;
+  nh.enable = true;
   
   networking = {
     hostName = "laptop";
