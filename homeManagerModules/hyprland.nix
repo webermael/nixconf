@@ -12,6 +12,33 @@
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
+        general = {
+          border_size = 3;
+          gaps_in = 5;
+          gaps_out = 10;
+
+          resize_on_border = true;
+        };
+
+        decoration = {
+          rounding = 5;
+          active_opacity = 1.0; # maybe try out?
+          inactive_opacity = 0.9; # nice?
+          fullscreen_opacity = 1.0;
+
+          dim_inactive = true; # nice?
+
+          blur = {
+            size = 5; # default: 8
+          };
+        };
+
+        misc = {
+          #disable_hyprland_logo = true;
+          disable_splash_rendering = true;
+          force_default_wallpaper = 0; 
+        };
+
         "$mod" = "SUPER";        
         bind = [
           "$mod, return, exec, kitty"
