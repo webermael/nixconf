@@ -23,10 +23,10 @@
         decoration = {
           rounding = 5;
           active_opacity = 1.0; # maybe try out?
-          inactive_opacity = 0.9; # nice?
+          inactive_opacity = 0.8; # nice?
           fullscreen_opacity = 1.0;
 
-          dim_inactive = true; # nice?
+          #dim_inactive = true; # nice?
 
           blur = {
             size = 5; # default: 8
@@ -41,12 +41,14 @@
 
         "$mod" = "SUPER";        
         bind = [
+	        # --- APPLICATION SHORTCUTS ---
           "$mod, return, exec, kitty"
           "$mod, B, exec, firefox"
           "$mod SHIFT, Q, killactive,"
           "$mod SHIFT, M, exit,"
           "$mod, F, fullscreen,"
 
+	        # --- WINDOWS ---
           "$mod, left, movefocus, l"
           "$mod, right, movefocus, r"
           "$mod, up, movefocus, u"
@@ -56,6 +58,11 @@
           "$mod, l, movefocus, r"
           "$mod, k, movefocus, u"
           "$mod, j, movefocus, d"
+	  
+          "$mod SHIFT, left, movewindow, l"
+          "$mod SHIFT, right, movewindow, r"
+          "$mod SHIFT, up, movewindow, u"
+          "$mod SHIFT, down, movewindow, d"
 
           "$mod SHIFT, h, movewindow, l"
           "$mod SHIFT, l, movewindow, r"
