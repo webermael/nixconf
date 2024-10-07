@@ -8,6 +8,7 @@
   systemSound.enable = true;
   bluetooth.enable = true;
   nh.enable = true;
+  zsh.enable = true;
   
   networking = {
     hostName = "laptop";

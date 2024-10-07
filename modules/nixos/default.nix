@@ -5,5 +5,6 @@
     ./bluetooth.nix
     ./openssh.nix
     ./nh.nix
+    ./zsh.nix
   ];
 }
