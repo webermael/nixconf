@@ -6,9 +6,9 @@
   };
 
   config = lib.mkIf config.zsh.enable {
-      programs.zsh = {
+    programs.zsh = {
       enable = true;
-      
+    
       autosuggestion.enable = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
@@ -25,20 +25,13 @@
       };
 
       historySubstringSearch.enable = true;
-      
-      # maybe change to something more lightweight at a later point
-      oh-my-zsh = {
-        enable = true;
-        #theme = ?;
-        plugins = [
-          "colored-man-pages"
-          "colorize"
-          "fzf"
-        ];  
-      };
-
     };
 
-    programs.fzf.enable = true;
+    # make own module
+    # resp. own module(s) for shell utilities (zoxide etc.)
+    programs.fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 }
