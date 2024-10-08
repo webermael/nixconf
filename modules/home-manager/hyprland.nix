@@ -23,7 +23,7 @@
         decoration = {
           rounding = 5;
           active_opacity = 1.0; # maybe try out?
-          inactive_opacity = 0.8; # nice?
+          inactive_opacity = 0.6; # nice?
           fullscreen_opacity = 1.0;
 
           #dim_inactive = true; # nice?

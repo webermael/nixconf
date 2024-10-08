@@ -9,6 +9,7 @@
   bluetooth.enable = true;
   nh.enable = true;
   zsh.enable = true;
+  sddm.enable = true;
   
   networking = {
     hostName = "laptop";
@@ -34,5 +35,5 @@
   programs.hyprland.enable = true;
   #programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   
-  #system.stateVersion = "23.11"; -> check why this is necesary
+  system.stateVersion = "24.11";
 }

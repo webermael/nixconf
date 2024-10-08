@@ -11,7 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Hyprland
     hyrpland.url = "github:hyprwm/Hyprland";
+
+    # AGS Widgets
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

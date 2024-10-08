@@ -6,5 +6,6 @@
     ./openssh.nix
     ./nh.nix
     ./zsh.nix
+    ./sddm.nix
   ];
 }

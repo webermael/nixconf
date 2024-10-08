@@ -2,6 +2,8 @@
 {
   hyprland.enable = true;
   zsh.enable = true;
+  helix.enable = true;
+  ags.enable = true;
   
   home = {
     username = "mael";
@@ -30,6 +32,6 @@
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 }
