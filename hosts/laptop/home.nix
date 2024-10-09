@@ -1,6 +1,7 @@
 { inputs, lib, config, pkgs, ... }:
 {
   hyprland.enable = true;
+  waybar.enable = true;
   zsh.enable = true;
   helix.enable = true;
   ags.enable = true;
