@@ -106,7 +106,7 @@
         * {
           border: none;
           border-radius: 0;
-          font-family: "Font Awesome 6 Free", sans-serif;
+          font-family: "Fira Code", sans-serif;
           font-size: 13px;
         }
       '';
