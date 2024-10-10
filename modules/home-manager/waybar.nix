@@ -108,6 +108,79 @@
           border-radius: 0;
           font-family: "Fira Code", sans-serif;
           font-size: 13px;
+          color: #ffffff;
+        }
+
+        window#waybar {
+          background: transparent;
+        }
+
+        /* --- WORKSPACEAS --- (fix colors / styling)*/
+        #workspaces {
+          background: #ffffff;
+          margin: 2px 1px 3px 1px;
+          padding: 0px 1px;
+          border-radius: 15px;
+          border: 0px;
+          font-weight: bold;
+          font-style: normal;
+          opacity: 0.8;
+          font-size: 14px;
+          color: #000000;
+        }
+
+        #workspaces button {
+          padding: 0px 5px;
+          margin: 4px 3px;
+          border-radius: 15px;
+          border: 0px;
+          color: #000000;
+          background-color: #808080;
+          transition: all 0.3s ease-in-out;
+          opacity: 0.4;
+        }
+
+        #workspaces button.active {
+          color: #000000;
+          background-color: #808080;
+          border-radius: 15px;
+          min-width: 40px;
+          transition: all 0.3s ease-in-out;
+          opacity:1.0;
+        }
+
+        #workspaces button:hover {
+          color: #000000;
+          background-color: #404040;
+          border-radius: 15px;
+          opacity:0.7;
+        }
+
+        /* --- TOOLTIP --- */
+        tooltip {
+          border-radius: 10px;
+          background-color: #ffffff;
+          opacity: 0.7;
+          padding: 20px;
+          margin: 0px;
+        }
+
+        tooltip label {
+          color: #000000;
+        }
+
+        /* --- WINDOW --- */
+        #window {
+          background-color: #ffffff;
+          margin: 5px 15px 5px 0px;
+          padding: 2px 10px 0px 10px;
+          border-radius: 12px;
+          color: #000000;
+          opacity: 0.8;
+        }
+
+        #window#waybar.empty #window {
+          background-color: transparent;
         }
       '';
     };
